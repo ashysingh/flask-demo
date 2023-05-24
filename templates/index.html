@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-CODE</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href= "{{url_for('static',filename= 'style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>GET IN TOUCH</h1>
+        <p>Provide us with your info, so we can reach out to you!</p>
+        <form action="/" method="post">
+            <div class="textt">       
+                <div class="row">
+                    <div class="column">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name here" name="Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="label2">
+                            <label for="contact">Contact Number</label>
+                            <input type="tel" id="contact" placeholder="Your phone number here" name="phone_number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn"  id="btnn">
+                <h2>
+                    Submit
+                </h2>
+
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
+<!--Just gotta add the successfull icon and hide background :)

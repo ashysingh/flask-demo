@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-CODE</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href= "{{url_for('static',filename= 'style.css')}}">
+</head>
+<body onload="openPopup()" onload="toggle()">>
+
+    <div class="show-popup" id="popup">
+            <img src="{{url_for('static',filename='check.png')}}">
+            <h1>Registration Successful</h1>
+            <p>We Will Call You Soon!</p>
+    </div>
+    <div class="container2" id="blur">
+        <h1>GET IN TOUCH</h1>
+        <p>Provide us with your info, so we can reach out to you!</p>
+        <form action="/register" method="post">
+            <div class="textt">       
+                <div class="row">
+                    <div class="column">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name here" name="Name"  disabled="True">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="label2">
+                            <label for="contact">Contact Number</label>
+                            <input type="tel" id="contact" placeholder="Your phone number here" name="phone_number" disabled="True">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" onclick="openPopup()" id="btnn" disabled="True">
+                <h2>
+                    Submit
+                </h2>
+
+            </button>
+        </form>
+    </div>
+<script type="text/javascript">
+    let popup=document.getElementById("popup")
+    let btn=document.getElementById("btnn")
+    function openPopup(){
+        popup.classList.add("open-popup")
+    function toggle(){
+        var blur = document.getElementById('blur')
+        blur.classList.toggle('active')
+
+
+    }
+    }
+</script>
+</body>
+</html>
+<!--Just gotta add the successfull icon and hide background :)
